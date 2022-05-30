@@ -11,9 +11,7 @@
   --hyperlink-color: #F74780;
   --hyperlink-active-color: #FFA7C3;
   --main-gradient: linear-gradient(#F02AA6, #FF6F48);
-  --main-gradient-hover: linear-gradient(#FFB7A4, #F896D2);
   --footer-gradient: linear-gradient(#4851FF, #F02AA6);
-  --footer-gradient-hover: linear-gradient(#C2A1F0, #F796D4);
   --bg-gradient: linear-gradient(#FFFFFF, #F0F1FF);
   --card-shadow: 0 25px 50px rgba(6, 22, 141, 0.05);
 }
@@ -31,7 +29,7 @@ header, footer {
   padding: 1rem;
 }
 
-header>button, footer>button {
+#btn-header, #btn-footer {
   border: none;
   border-radius: 28px;
   color: white;
@@ -46,11 +44,11 @@ header>button, footer>button {
 }
 
 /* Header styling */
-header>button {
+#btn-header {
   background-color: var(--title-color);
 }
 
-header>button:hover {
+#btn-header:hover {
   background-color: var(--btn-header-bg-active-color);
   cursor: pointer;
 }
@@ -61,11 +59,91 @@ footer {
   padding: 2.25rem 1rem;
 }
 
-footer>button {
+#btn-footer {
   background-image: var(--footer-gradient);
+  position: relative;
+  transition: all 200ms ease-in-out;
+  z-index: 1;
 }
 
-footer>button:hover {
+#btn-footer:hover {
   cursor: pointer;
-  background: var(--footer-gradient-hover);
+}
+
+#btn-footer::before {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 28px;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: -1;
+}
+
+#btn-footer:hover::before {
+  opacity: 1;
+}
+
+/* Main section */
+main {
+  padding: 1.375rem 1rem 4.125rem 1rem;
+}
+
+main h1 {
+  color: var(--title-color);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+main p {
+  color: var(--text-color);
+  padding: 1.625rem 0 1.5rem 0;
+  line-height: 1.625rem;
+}
+
+main #btn-main {
+  background-image: var(--main-gradient);
+  border: none;
+  border-radius: 31.5px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 2.375rem;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  z-index: 1;
+}
+
+main #btn-main:hover {
+  cursor: pointer;
+}
+
+main #btn-main::before {
+  background-color: rgba(255, 255, 255, 0.5);
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 200ms ease-in-out;
+  z-index: -1;
+}
+
+main #btn-main:hover::before {
+  opacity: 1;
+}
+
+main #img-main {
+  background-image: url(assets/image-hero-mobile@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 92.05%;
 }
