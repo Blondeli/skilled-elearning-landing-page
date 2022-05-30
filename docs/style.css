@@ -11,7 +11,9 @@
   --hyperlink-color: #F74780;
   --hyperlink-active-color: #FFA7C3;
   --main-gradient: linear-gradient(#F02AA6, #FF6F48);
+  --main-gradient-hover: linear-gradient(#FFB7A4, #F896D2);
   --footer-gradient: linear-gradient(#4851FF, #F02AA6);
+  --footer-gradient-hover: linear-gradient(#C2A1F0, #F796D4);
   --bg-gradient: linear-gradient(#FFFFFF, #F0F1FF);
   --card-shadow: 0 25px 50px rgba(6, 22, 141, 0.05);
 }
@@ -19,4 +21,51 @@
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1rem;
+}
+
+/* Header and footer layout */
+header, footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+header>button, footer>button {
+  border: none;
+  border-radius: 28px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.625rem 1.5rem;
+  transition: all 200ms ease-in-out;
+}
+
+.logo {
+  width: 89px;
+}
+
+/* Header styling */
+header>button {
+  background-color: var(--title-color);
+}
+
+header>button:hover {
+  background-color: var(--btn-header-bg-active-color);
+  cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--title-color);
+  padding: 2.25rem 1rem;
+}
+
+footer>button {
+  background-image: var(--footer-gradient);
+}
+
+footer>button:hover {
+  cursor: pointer;
+  background: var(--footer-gradient-hover);
 }
