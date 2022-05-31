@@ -211,9 +211,9 @@ main #img-main {
 
 /* Tablet design */
 @media (min-width: 576px) {
-  body {
+  /* body, html {
     overflow-x: hidden;
-  }
+  } */
 
   /* Header and footer layout */
   header {
@@ -226,7 +226,9 @@ main #img-main {
   
   /* Main section */
   main {
+    overflow: hidden;
     padding: 6.1875rem 350px 11.625rem 2.5rem;
+    position: relative;
   }
   
   main #img-main {
@@ -251,7 +253,107 @@ main #img-main {
     padding: 3.5rem 1.75rem 0 1.75rem;
   }
 
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.5rem;
+  }
+
+  .service-card a {
+    margin-top: auto;
+  }
+
   #animation-card {
+    margin-top: 0;
+  }
+}
+
+/* Desktop design */
+@media (min-width: 992px) {
+  /* Header and footer layout */
+  header {
+    padding: 1.5rem 10.3125rem 0 10.3125rem;
+  }
+  
+  footer {
+    padding: 2rem 10.3125rem;
+  }
+  
+  #btn-header,
+  #btn-footer {
+    font-size: 1.125rem;
+    padding: 0.875rem 2rem;
+  }
+  
+  .logo {
+    width: 114px;
+  }
+  
+  /* Main section */
+  main {
+    padding: 11.125rem 680px 14.125rem 10.3125rem;
+  }
+  
+  main h1 {
+    font-size: 3.5rem;
+  }
+  
+  main p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 1.875rem 0 2.5rem 0;
+  }
+  
+  main #btn-main {
+    font-size: 1.125rem;
+    padding: 0.875rem 2rem;
+  }
+  
+  main #img-main {
+    background-image: url(assets/image-hero-desktop@2x.png);
+    height: 937px;
+    right: -358px;
+    top: -146px;
+    width: 992px;
+  }
+  
+  /* Grid section */
+  #grid-section {
+    column-gap: 1.875rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10.3125rem 8.75rem 10.3125rem;
+  }
+  
+  #grid-section #check-out-card {
+    padding: 4rem 2rem;
+  }
+  
+  #grid-section #check-out-card h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  /* Service card layout */
+  .service-card {
+    margin-top: 5rem;
+    padding: 4rem 2rem 2.5rem 2rem;
+  }
+  
+  .service-card .service-icon {
+    left: 2rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .service-card p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding: 1.5rem 0;
+  }
+
+  #design-card {
     margin-top: 0;
   }
 }
