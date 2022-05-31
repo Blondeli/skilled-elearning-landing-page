@@ -208,3 +208,50 @@ main #img-main {
 .service-card a:hover {
   color: var(--hyperlink-active-color);
 }
+
+/* Tablet design */
+@media (min-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Header and footer layout */
+  header {
+    padding: 1.5rem 2.5rem 0 2.5rem;
+  }
+
+  footer {
+    padding: 2.25rem 2.5rem;
+  }
+  
+  /* Main section */
+  main {
+    padding: 6.1875rem 350px 11.625rem 2.5rem;
+  }
+  
+  main #img-main {
+    background-image: url(assets/image-hero-tablet@2x.png);
+    height: 640px;
+    position: absolute;
+    right: -270px;
+    top: -80px;
+    width: 640px;
+    z-index: -1;
+  }
+  
+  /* Grid section */
+  #grid-section {
+    column-gap: 0.625rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2.5rem 5.375rem 2.5rem;
+  }
+  
+  #grid-section #check-out-card {
+    padding: 3.5rem 1.75rem 0 1.75rem;
+  }
+
+  #animation-card {
+    margin-top: 0;
+  }
+}
