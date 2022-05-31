@@ -10,7 +10,7 @@
   --text-color: #83869A;
   --hyperlink-color: #F74780;
   --hyperlink-active-color: #FFA7C3;
-  --main-gradient: linear-gradient(#F02AA6, #FF6F48);
+  --main-gradient: linear-gradient(#FF6F48, #F02AA6);
   --footer-gradient: linear-gradient(#4851FF, #F02AA6);
   --bg-gradient: linear-gradient(#FFFFFF, #F0F1FF);
   --card-shadow: 0 25px 50px rgba(6, 22, 141, 0.05);
@@ -20,6 +20,8 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1rem;
 }
+
+/* Mobile design */
 
 /* Header and footer layout */
 header, footer {
@@ -90,7 +92,7 @@ footer {
 
 /* Main section */
 main {
-  padding: 1.375rem 1rem 4.125rem 1rem;
+  padding: 1.375rem 1rem 0 1rem;
 }
 
 main h1 {
@@ -146,4 +148,63 @@ main #img-main {
   width: 100%;
   height: 0;
   padding-top: 92.05%;
+}
+
+/* Grid section */
+#grid-section {
+  background-image: var(--bg-gradient);
+  padding: 0 1rem 5rem 1rem;
+}
+
+#grid-section #check-out-card {
+  background-image: var(--main-gradient);
+  border-radius: 10px;
+  color: white;
+  padding: 1.5rem 1.75rem 2rem 1.75rem;
+}
+
+#grid-section #check-out-card h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+}
+
+/* Service card layout */
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 2.5rem;
+  padding: 3.5rem 1.75rem 2rem 1.75rem;
+  position: relative;
+}
+
+.service-card .service-icon {
+  left: 1.75rem;
+  position: absolute;
+  top: -23px;
+}
+
+.service-card h3 {
+  color: var(--title-color);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.service-card p {
+  color: var(--text-color);
+  line-height: 1.625rem;
+  padding: 1rem 0 1.5rem 0;
+}
+
+.service-card a {
+  color: var(--hyperlink-color);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+
+.service-card a:hover {
+  color: var(--hyperlink-active-color);
 }
